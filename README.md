@@ -77,32 +77,15 @@ Generate JSON Logs
 ```text
 claude-data-retrieval/
 
-│── claude_web.py
-│── claude_desktop.py
+│── claude_capture.py
 │── README.md
 ```
 
 ---
 
-## 🌐 claude_web.py
+## 🌐 claude_capture.py
 
-Captures runtime interactions from the Claude web application.
-
-Features include:
-
-- Prompt retrieval
-- Response retrieval
-- Conversation ID extraction
-- Uploaded file detection
-- Automatic file download
-- JSON logging
-- Raw request and response logging
-
----
-
-## 💻 claude_desktop.py
-
-Captures runtime interactions from the Claude Desktop application.
+Captures runtime interactions from the Claude web application / Claude Desktop.
 
 Features include:
 
@@ -160,6 +143,24 @@ The tool extracts:
 6. Detect uploaded files.
 7. Download supported files.
 8. Save structured JSON logs.
+
+---
+
+## 🚀 Configuration
+
+Before running the script, update the following configuration values:
+
+```python
+PLATFORM = "Claude Website"      # or "Claude Desktop"
+OUTPUT_DIR = "claude_web_output"
+```
+
+For Claude Desktop, change the values accordingly:
+
+```python
+PLATFORM = "Claude Desktop"
+OUTPUT_DIR = "claude_output"
+```
 
 ---
 
